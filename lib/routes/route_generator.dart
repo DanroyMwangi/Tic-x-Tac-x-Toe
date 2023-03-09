@@ -12,8 +12,18 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => MaterialApp());
       default:
         return MaterialPageRoute(
-            builder: (_) =>
-                const MaterialApp(home: Scaffold(body: Text('jheha'))));
+            builder: (_) => MaterialApp(
+                    home: Scaffold(
+                        body: SafeArea(
+                            child: Expanded(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      const Text('jheha'),
+                    ],
+                  ),
+                )))));
     }
   }
 }
