@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tic_tac_toe/configs/app_strings.dart';
+import 'package:tic_tac_toe/pages/error_page.dart';
+import 'package:tic_tac_toe/pages/game_page.dart';
 import 'package:tic_tac_toe/pages/home_page.dart';
 
 class RouteGenerator {
@@ -9,21 +11,9 @@ class RouteGenerator {
       case homePage:
         return MaterialPageRoute(builder: (_) => const HomePage());
       case gamePage:
-        return MaterialPageRoute(builder: (_) => MaterialApp());
+        return MaterialPageRoute(builder: (_) => const GamePage());
       default:
-        return MaterialPageRoute(
-            builder: (_) => MaterialApp(
-                    home: Scaffold(
-                        body: SafeArea(
-                            child: Expanded(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: <Widget>[
-                      const Text('jheha'),
-                    ],
-                  ),
-                )))));
+        return MaterialPageRoute(builder: (_)=> const ErrorPage());
     }
   }
 }
