@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class PlayerModel {
   final String playerName;
-  List<Key>? _moves;
+  List<Key?>? _moves;
   final String? characterIcon;
 
   PlayerModel({this.playerName = 'player', this.characterIcon});

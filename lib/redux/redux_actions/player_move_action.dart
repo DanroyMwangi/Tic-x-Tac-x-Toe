@@ -23,7 +23,7 @@ class PlayerMoveAction extends ReduxAction<AppState> {
       newCells[cellKey]!['visible'] = true;
 
       // Adding the Player moves to the array of moves
-      List<Key?> playerMoves = [];
+      List<Key?>? playerMoves = [];
       playerMoves.add(cellKey);
 
       // New var to update the current player's moves
